@@ -1,6 +1,17 @@
 import java.util.Scanner;
+
+/**
+ * La clase Criba se encarga de devolvernos un array con numeros primos desde 0 hasta
+ * el numero que pasemos como parametro.
+ * @author Jonathan
+ */
 public class Criba  {
-   //Generar numeros primos de 1 a max
+
+    /**
+     * Metodo generaPrimos recibe un numero max y devuelve numero primos
+     * @param max recibe el numero entero
+     * @return primos devuelve el array
+     */
     public static int[] generarPrimos (int max){
 
         int i , j;
