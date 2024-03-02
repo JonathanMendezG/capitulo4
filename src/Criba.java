@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Criba {
+public class Criba  {
    //Generar numeros primos de 1 a max
     public static int[] generarPrimos (int max){
 
@@ -18,6 +18,7 @@ public class Criba {
             //Criba
             for (i = 2 ; i < Math.sqrt(dim) + 1 ; i++){
                 if (esPrimo[i]){
+                    //Eliminar los multiplos de i
                     for ( j = 2*i ; j < dim ; j+=i){
                         esPrimo[j] = false;
                     }
@@ -47,25 +48,5 @@ public class Criba {
         }
     }
 
-    public static void main (String[] args){
-        Scanner teclado = new Scanner(System.in);
-        System.out.println("Introduce el número para la criba de Erastótenes:");
-        int dato = teclado.nextInt();
-        int vector[] = new int[dato];
-        System.out.println("\nVector de primos hasta: " + dato);
-        for (int i = 0 ; i < vector.length ; i++ ){
-            if (i%10==0) {
-                System.out.println();
-                System.out.println(i + 1 + "\t");
-            }
-        }
-        vector = generarPrimos(dato);
-        System.out.println("\nVector de primos hasta: " + dato);
-        for (int i = 0 ; i < vector.length ; i++){
-            if (i%10==0) {
-                System.out.println();
-                System.out.println(i + 1 + "\t");
-            }
-        }
-    }
+
 }
